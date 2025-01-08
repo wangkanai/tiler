@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solutions", ".Solutions", 
 		Directory.Packages.props = Directory.Packages.props
 		LICENSE = LICENSE
 		README.md = README.md
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wangkanai.Tiler.Domain", "src\Domain\Wangkanai.Tiler.Domain.csproj", "{D4A7EFD7-F4C7-4D88-AA7F-69706168B56B}"
