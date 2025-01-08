@@ -16,11 +16,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Solutions", ".Solutions", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wangkanai.Tiler.Domain", "src\Domain\Wangkanai.Tiler.Domain.csproj", "{D4A7EFD7-F4C7-4D88-AA7F-69706168B56B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E9E56CCE-E831-4D6F-A489-C20C7D920CAA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E9E56CCE-E831-4D6F-A489-C20C7D920CAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wangkanai.Tiler.UnitTests", "test\Unit\Wangkanai.Tiler.UnitTests.csproj", "{9B7BA647-45FE-406D-9941-0403E08D0169}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wangkanai.Tiler.FunctionalTests", "test\Functional\Wangkanai.Tiler.FunctionalTests.csproj", "{58F8FBA0-334D-4A85-9F0D-7C7039850B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wangkanai.Tiler.UnitTests", "tests\Unit\Wangkanai.Tiler.UnitTests.csproj", "{16FB41EC-73BD-4E2C-8570-CA29B255A6C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wangkanai.Tiler.FunctionalTests", "tests\Functional\Wangkanai.Tiler.FunctionalTests.csproj", "{672BA74C-4E29-45BE-B23A-DA786BC51959}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,9 +47,19 @@ Global
 		{58F8FBA0-334D-4A85-9F0D-7C7039850B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58F8FBA0-334D-4A85-9F0D-7C7039850B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58F8FBA0-334D-4A85-9F0D-7C7039850B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16FB41EC-73BD-4E2C-8570-CA29B255A6C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16FB41EC-73BD-4E2C-8570-CA29B255A6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16FB41EC-73BD-4E2C-8570-CA29B255A6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16FB41EC-73BD-4E2C-8570-CA29B255A6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{672BA74C-4E29-45BE-B23A-DA786BC51959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672BA74C-4E29-45BE-B23A-DA786BC51959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672BA74C-4E29-45BE-B23A-DA786BC51959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672BA74C-4E29-45BE-B23A-DA786BC51959}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9B7BA647-45FE-406D-9941-0403E08D0169} = {E9E56CCE-E831-4D6F-A489-C20C7D920CAA}
 		{58F8FBA0-334D-4A85-9F0D-7C7039850B70} = {E9E56CCE-E831-4D6F-A489-C20C7D920CAA}
+		{16FB41EC-73BD-4E2C-8570-CA29B255A6C0} = {E9E56CCE-E831-4D6F-A489-C20C7D920CAA}
+		{672BA74C-4E29-45BE-B23A-DA786BC51959} = {E9E56CCE-E831-4D6F-A489-C20C7D920CAA}
 	EndGlobalSection
 EndGlobal
