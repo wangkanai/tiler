@@ -1,8 +1,6 @@
 // Copyright (c) 2014-2024 Sarin Na Wangkanai, All Rights Reserved.Apache License, Version 2.0
 
-using Wangkanai.Tiler.Domain;
-
-namespace Wangkanai.Tiler.UnitTests.Domain;
+namespace Wangkanai.Tiler.Domain;
 
 public class CoordinatePairTests
 {

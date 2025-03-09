@@ -36,10 +36,10 @@ public class MapExtent
 	/// </summary>
 	public MapExtent()
 	{
-		North = MaxExtent;
-		East  = MaxExtent;
-		South = -MaxExtent;
-		West  = -MaxExtent;
+		North = Math.PI * MaxExtent;
+		East  = Math.PI * MaxExtent;
+		South = Math.PI * -MaxExtent;
+		West  = Math.PI * -MaxExtent;
 	}
 
 	/// <summary>
