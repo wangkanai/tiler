@@ -4,5 +4,6 @@ namespace Wangkanai.Tiler.Domain.Providers;
 
 public class GoogleProvider
 {
-	private const string UrlFormat = "https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}";
+	public static string GetTileUrl(int x, int y, int z)
+		=> $"https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}";
 }
