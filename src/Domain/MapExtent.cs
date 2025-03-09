@@ -29,7 +29,7 @@ public class MapExtent
     /// <summary>
     /// Maximum extent of the Spherical Mercator projection in meters
     /// </summary>
-    public const double MaxExtent = CoordinatePair.MaxExtent;
+    public const double MaxExtent = 6378137;
 
     /// <summary>
     /// Creates a new map extent with default values (full Spherical Mercator extent)

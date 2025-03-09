@@ -7,6 +7,16 @@ namespace Wangkanai.Tiler.Domain;
 public class CoordinatePair
 {
     /// <summary>
+    /// Represents a coordinate pair with X and Y values.
+    /// Can be used for geographical coordinates, pixel positions, or any 2D coordinate system.
+    /// </summary>
+    public CoordinatePair(double x, double y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    /// <summary>
     /// X coordinate (horizontal position)
     /// </summary>
     public double X { get; set; }
