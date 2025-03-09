@@ -1,6 +1,6 @@
 ﻿namespace Wangkanai.Tiler.Domain;
 
-public class MercatorCoordinate
+public class Mercator
 {
 	/// <summary>
 	/// Gets or sets the size of the Mercator coordinate.
@@ -17,7 +17,7 @@ public class MercatorCoordinate
 	/// that is based on the Spherical Mercator projection (EPSG:3857).
 	/// Provides properties to calculate properties like resolution and size.
 	/// </summary>
-	public MercatorCoordinate()
+	public Mercator()
 	{
 		Size       = 512;
 		Resolution = 2 * Math.PI * MapExtent.MaxExtent / Size;
