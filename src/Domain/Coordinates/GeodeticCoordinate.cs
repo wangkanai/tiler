@@ -1,6 +1,6 @@
 namespace Wangkanai.Tiler.Domain;
 
-public class Geodetic
+public class GeodeticCoordinate
 {
-    
+
 }
