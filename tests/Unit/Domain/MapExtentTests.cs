@@ -1,7 +1,5 @@
 // Copyright (c) 2014-2024 Sarin Na Wangkanai, All Rights Reserved.Apache License, Version 2.0
 
-using Xunit;
-
 namespace Wangkanai.Tiler.Domain;
 
 public class MapExtentTests
@@ -11,7 +9,7 @@ public class MapExtentTests
     {
         // Arrange & Act
         var mapExtent = new MapExtent();
-        
+
         // Assert
         // Default constructor sets the map extent to the full Spherical Mercator projection range
         Assert.Equal(Math.PI * MapExtent.MaxExtent, mapExtent.North);
@@ -28,57 +26,57 @@ public class MapExtentTests
         double east = 20000;
         double south = -10000;
         double west = -20000;
-        
+
         // Act
         var mapExtent = new MapExtent(north, east, south, west);
-        
+
         // Assert
         Assert.Equal(north, mapExtent.North);
         Assert.Equal(east, mapExtent.East);
         Assert.Equal(south, mapExtent.South);
         Assert.Equal(west, mapExtent.West);
     }
-    
+
     [Fact]
     public void Width_CalculatesCorrectly()
     {
         // Arrange
         var mapExtent = new MapExtent(10000, 20000, -10000, -20000);
-        
+
         // Act
         double width = mapExtent.Width;
-        
+
         // Assert
         Assert.Equal(40000, width);
     }
-    
+
     [Fact]
     public void Height_CalculatesCorrectly()
     {
         // Arrange
         var mapExtent = new MapExtent(10000, 20000, -10000, -20000);
-        
+
         // Act
         double height = mapExtent.Height;
-        
+
         // Assert
         Assert.Equal(20000, height);
     }
-    
+
     [Fact]
     public void GetCenter_ReturnsCorrectCenter()
     {
         // Arrange
         var mapExtent = new MapExtent(10000, 20000, -10000, -20000);
-        
+
         // Act
         var center = mapExtent.GetCenter();
-        
+
         // Assert
         Assert.Equal(0, center.X);
         Assert.Equal(0, center.Y);
     }
-    
+
     [Theory]
     [InlineData(0, 0, true)]             // Center point
     [InlineData(15000, 5000, true)]      // Point inside
@@ -92,14 +90,14 @@ public class MapExtentTests
         // Arrange
         var mapExtent = new MapExtent(10000, 20000, -10000, -20000);
         var point = new CoordinatePair(x, y);
-        
+
         // Act
         bool result = mapExtent.Contains(point);
-        
+
         // Assert
         Assert.Equal(expected, result);
     }
-    
+
     [Theory]
     [InlineData(10000, 20000, -10000, -20000, true)]           // Valid extent
     [InlineData(MapExtent.MaxExtent + 1, 0, 0, 0, false)]      // North too large
@@ -112,23 +110,23 @@ public class MapExtentTests
     {
         // Arrange
         var mapExtent = new MapExtent(north, east, south, west);
-        
+
         // Act
         bool result = mapExtent.IsValid();
-        
+
         // Assert
         Assert.Equal(expected, result);
     }
-    
+
     [Fact]
     public void ToString_FormatsCorrectly()
     {
         // Arrange
         var mapExtent = new MapExtent(10000, 20000, -10000, -20000);
-        
+
         // Act
         string result = mapExtent.ToString();
-        
+
         // Assert
         Assert.Equal("N:10000m, E:20000m, S:-10000m, W:-20000m", result);
     }
