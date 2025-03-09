@@ -17,4 +17,8 @@
 		<PackageReference Include="xunit.runner.visualstudio" />
 		<PackageReference Include="coverlet.collector" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\src\Domain\Wangkanai.Tiler.Domain.csproj" />
+	</ItemGroup>
 </Project>
