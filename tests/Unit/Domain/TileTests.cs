@@ -8,11 +8,11 @@ public class TileTests
         // Arrange
         int x = 3;
         int y = 5;
-        int levelOfDetail = 3;
+        int z = 3;
         string expectedQuadKey = "213";
 
         // Act
-        string result = Tile.QuadKey(x, y, levelOfDetail);
+        string result = Tile.QuadKey(x, y, z);
 
         // Assert
         Assert.Equal(expectedQuadKey, result);
@@ -24,11 +24,11 @@ public class TileTests
         // Arrange
         int x = 0;
         int y = 0;
-        int levelOfDetail = 3;
+        int z = 3;
         string expectedQuadKey = "000";
 
         // Act
-        string result = Tile.QuadKey(x, y, levelOfDetail);
+        string result = Tile.QuadKey(x, y, z);
 
         // Assert
         Assert.Equal(expectedQuadKey, result);
@@ -40,11 +40,11 @@ public class TileTests
         // Arrange
         int x = (1 << 3) - 1; // 7
         int y = (1 << 3) - 1; // 7
-        int levelOfDetail = 3;
+        int z = 3;
         string expectedQuadKey = "333";
 
         // Act
-        string result = Tile.QuadKey(x, y, levelOfDetail);
+        string result = Tile.QuadKey(x, y, z);
 
         // Assert
         Assert.Equal(expectedQuadKey, result);
@@ -56,10 +56,10 @@ public class TileTests
         // Arrange
         int x = 0;
         int y = 0;
-        int levelOfDetail = 1;
+        int z = 1;
 
         // Act
-        string result = Tile.QuadKey(x, y, levelOfDetail);
+        string result = Tile.QuadKey(x, y, z);
 
         // Assert
         Assert.Equal(1, result.Length);
@@ -72,10 +72,10 @@ public class TileTests
         // Arrange
         int x = 8192;
         int y = 8192;
-        int levelOfDetail = 15;
+        int z = 15;
 
         // Act
-        string result = Tile.QuadKey(x, y, levelOfDetail);
+        string result = Tile.QuadKey(x, y, z);
 
         // Assert
         Assert.Equal(15, result.Length);
@@ -85,11 +85,11 @@ public class TileTests
     public void QuadKey_WhenCalledWithDifferentXY_GeneratesDifferentQuadKeys()
     {
         // Arrange
-        int levelOfDetail = 4;
+        int z = 4;
 
         // Act
-        string result1 = Tile.QuadKey(5, 10, levelOfDetail);
-        string result2 = Tile.QuadKey(10, 5, levelOfDetail);
+        string result1 = Tile.QuadKey(5, 10, z);
+        string result2 = Tile.QuadKey(10, 5, z);
 
         // Assert
         Assert.NotEqual(result1, result2);
