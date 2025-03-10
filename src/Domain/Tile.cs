@@ -7,13 +7,13 @@ public static class Tile
 	/// </summary>
 	/// <param name="x">Tile X coordinate</param>
 	/// <param name="y">Tile Y coordinate</param>
-	/// <param name="levelOfDetail">Level of detail, from 1 (lowest detail) to 23 (highest detail)</param>
+	/// <param name="zoom">Level of detail, from 1 (lowest detail) to 23 (highest detail)</param>
 	/// <returns>A string containing the QuadKey</returns>
-	public static string QuadKey(int x, int y, int levelOfDetail)
+	public static string QuadKey(int x, int y, int zoom)
 	{
-		var quadKey = new char[levelOfDetail];
+		var quadKey = new char[zoom];
 
-		for (int i = levelOfDetail - 1; i >= 0; i--)
+		for (int i = zoom - 1; i >= 0; i--)
 		{
 			var digit = '0';
 			var mask  = 1 << i;
@@ -27,7 +27,7 @@ public static class Tile
 				digit++;
 			}
 
-			quadKey[levelOfDetail - 1 - i] = digit;
+			quadKey[zoom - 1 - i] = digit;
 		}
 
 		return new string(quadKey);
