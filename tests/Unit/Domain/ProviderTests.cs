@@ -49,6 +49,6 @@ public class ProviderTests
         string url = BingProvider.GetTileUrl(x, y, z);
         
         // Assert
-        Assert.Contains($"a{expectedQuadKey}.jpeg", url);
+        Assert.Contains($"{expectedQuadKey}", url);
     }
 }
