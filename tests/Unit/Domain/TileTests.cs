@@ -86,10 +86,10 @@ public class TileTests
     [InlineData(0, 0, 4, "0000")]
     [InlineData(15, 15, 4, "3333")]
     [InlineData(2, 3, 3, "032")]
-    [InlineData(5, 2, 4, "1021")]
-    [InlineData(7, 3, 4, "1321")]
-    [InlineData(8, 9, 5, "02101")]
-    [InlineData(16, 16, 5, "10303")]
+    [InlineData(5, 2, 4, "0121")]
+    [InlineData(7, 3, 4, "0133")]
+    [InlineData(8, 9, 5, "03002")]
+    [InlineData(16, 16, 5, "30000")]
     public void QuadKey_WithVariousInputs_ReturnsExpectedResults(int x, int y, int zoom, string expected)
     {
         // Act
@@ -125,16 +125,16 @@ public class TileTests
     public void QuadKey_BitPatternTest_EnsuresCorrectQuadKeyGeneration()
     {
         // This test verifies the bit pattern handling for each quadrant at zoom level 1
-        
+
         // Quadrant 0: x=0, y=0
         Assert.Equal("0", Tile.QuadKey(0, 0, 1));
-        
+
         // Quadrant 1: x=1, y=0
         Assert.Equal("1", Tile.QuadKey(1, 0, 1));
-        
+
         // Quadrant 2: x=0, y=1
         Assert.Equal("2", Tile.QuadKey(0, 1, 1));
-        
+
         // Quadrant 3: x=1, y=1
         Assert.Equal("3", Tile.QuadKey(1, 1, 1));
     }
@@ -153,7 +153,7 @@ public class TileTests
         // Assert
         Assert.Equal(zoom, result.Length);
     }
-    
+
     [Fact]
     public void QuadKey_LengthEqualsZoomLevel_ForAllZoomLevels()
     {
@@ -162,19 +162,19 @@ public class TileTests
         {
             int x = zoom * 2;
             int y = zoom * 3;
-            
+
             string result = Tile.QuadKey(x, y, zoom);
-            
+
             Assert.Equal(zoom, result.Length);
         }
     }
-    
+
     [Fact]
     public void QuadKey_FirstDigitEncodesMostSignificantBit()
     {
-        // This test verifies that the first digit of the quadkey 
+        // This test verifies that the first digit of the quadkey
         // encodes the most significant bit position
-        
+
         // For zoom=3, the first digit should encode bit position 2
         Assert.Equal('0', Tile.QuadKey(0, 0, 3)[0]);
         Assert.Equal('1', Tile.QuadKey(4, 0, 3)[0]);
