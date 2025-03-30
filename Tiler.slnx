@@ -10,6 +10,7 @@
     <File Path="build.ps1" />
     <File Path="sign.ps1" />
     <File Path="version.ps1" />
+    <File Path=".github\workflows\dotnet.yml" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests\Functional\Wangkanai.Tiler.FunctionalTests.csproj" Type="Classic C#" />
