@@ -1,6 +1,6 @@
 <Project>
 	<PropertyGroup>
-		<Version>0.0.0</Version>
+		<Version>0.0.1</Version>
 		<Title>Wangkanai Tiler</Title>
 		<Description>Transform your raster images and vector geodata into high-resolution tiled maps.</Description>
 		<Company>Wangkanai</Company>
