@@ -13,10 +13,10 @@ public static class Tile
 	/// <returns>A string containing the QuadKey</returns>
 	public static string QuadKey(int x, int y, int zoom)
 	{
-		var quadKey = new StringBuilder(); 
+		var quadKey = new StringBuilder();
 
 		for (int i = zoom; i > 0; i--)
-{	
+		{
 			var digit = '0';
 			var mask  = 1 << (i - 1);
 
@@ -29,9 +29,9 @@ public static class Tile
 				digit++;
 			}
 
-			quadKey.Append(digit); 
+			quadKey.Append(digit);
 		}
 
-		return quadKey.ToString();;
+		return quadKey.ToString();
 	}
 }
