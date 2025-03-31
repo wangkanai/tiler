@@ -1,0 +1,17 @@
+﻿<Solution>
+  <Folder Name="/.Solutions/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests\Functional\Wangkanai.Tiler.FunctionalTests.csproj" Type="Classic C#" />
+    <Project Path="tests\Unit\Wangkanai.Tiler.UnitTests.csproj" Type="Classic C#" />
+  </Folder>
+  <Project Path="src\Application\Wangkanai.Tiler.Application.csproj" Type="Classic C#" />
+  <Project Path="src\Domain\Wangkanai.Tiler.Domain.csproj" Type="Classic C#" />
+</Solution>
