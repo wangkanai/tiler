@@ -1,7 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+		<AssemblyName>tiler</AssemblyName>
     <OutputType>Exe</OutputType>
+		<Optimize>true</Optimize>
+		<IsPackable>false</IsPackable>
+		<PublishAot>true</PublishAot>
+		<PublishSingleFile>true</PublishSingleFile>
+		<PublishTrimmed>true</PublishTrimmed>
+		<IsTrimmable>true</IsTrimmable>
+		<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+		<IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
   </PropertyGroup>
 
   <ItemGroup>
