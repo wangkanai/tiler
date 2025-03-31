@@ -21,4 +21,8 @@
 		<PackageReference Include="System.CommandLine" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Commands\" />
+	</ItemGroup>
+
 </Project>
