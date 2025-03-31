@@ -9,12 +9,15 @@
     <File Path=".gitignore" />
     <File Path="build.ps1" />
     <File Path="sign.ps1" />
-    <File Path="Version.ps1" />
+    <File Path="version.ps1" />
+    <File Path=".github\workflows\dotnet.yml" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests\Functional\Wangkanai.Tiler.FunctionalTests.csproj" Type="Classic C#" />
     <Project Path="tests\Unit\Wangkanai.Tiler.UnitTests.csproj" Type="Classic C#" />
+    <File Path="tests\Directory.Build.props" />
   </Folder>
   <Project Path="src\Application\Wangkanai.Tiler.Application.csproj" Type="Classic C#" />
   <Project Path="src\Domain\Wangkanai.Tiler.Domain.csproj" Type="Classic C#" />
+  <Project Path="src\Root\Wangkanai.Tiler.csproj" Type="Classic C#" />
 </Solution>
