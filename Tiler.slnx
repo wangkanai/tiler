@@ -9,6 +9,7 @@
     <File Path=".gitignore" />
     <File Path="build.ps1" />
     <File Path="sign.ps1" />
+    <File Path="Version.ps1" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests\Functional\Wangkanai.Tiler.FunctionalTests.csproj" Type="Classic C#" />
