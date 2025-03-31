@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <ProjectReference Include="..\Application\Wangkanai.Tiler.Application.csproj" PrivateAssets="all" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Application\Wangkanai.Tiler.Application.csproj" PrivateAssets="all" />
+	</ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 param(
-    [Parameter(mandatory = $false)]
-    [bool]$dryrun = $false,
-    [Parameter(mandatory = $false)]
-    [string]$certicate = "Open Source Developer, Sarin Na Wangkanai"
+    [Parameter(mandatory=$false)]
+    [bool]$dryrun=$false,
+    [Parameter(mandatory=$false)]
+    [string]$certicate="Open Source Developer, Sarin Na Wangkanai"
 )
 
 Write-Host "NuGet Certificate: $certicate"  -ForegroundColor Magenta
@@ -26,7 +26,8 @@ dotnet pack -c Release -tl -o .\artifacts --include-symbols -p:SymbolPackageForm
 dotnet nuget sign .\artifacts\*.nupkg  -v normal --timestamper http://timestamp.digicert.com --certificate-subject-name $certicate -o .\signed
 dotnet nuget sign .\artifacts\*.snupkg -v normal --timestamper http://timestamp.digicert.com --certificate-subject-name $certicate -o .\signed
 
-if ($dryrun) {
+if ($dryrun)
+{
     Write-Host "Dryrun: Cryptography" -ForegroundColor Yellow;
     exit;
 }

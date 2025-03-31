@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Domain\Wangkanai.Tiler.Domain.csproj" />
-    <ProjectReference Include="..\..\src\Root\Wangkanai.Tiler.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\Domain\Wangkanai.Tiler.Domain.csproj" />
+		<ProjectReference Include="..\..\src\Root\Wangkanai.Tiler.csproj" />
+	</ItemGroup>
 </Project>

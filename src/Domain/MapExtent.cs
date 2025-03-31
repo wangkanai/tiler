@@ -1,38 +1,20 @@
+// Copyright (c) 2014-2025 Sarin Na Wangkanai, All Rights Reserved.Apache License, Version 2.0
+
 namespace Wangkanai.Tiler.Domain;
 
 /// <summary>
-/// Represents the geographical extent of a map canvas in Spherical Mercator projection (EPSG:3857).
-/// Boundaries are expressed in meters.
+///     Represents the geographical extent of a map canvas in Spherical Mercator projection (EPSG:3857).
+///     Boundaries are expressed in meters.
 /// </summary>
 public class MapExtent
 {
 	/// <summary>
-	/// Northern boundary of the map extent (maximum Y in meters)
-	/// </summary>
-	public double North { get; set; }
-
-	/// <summary>
-	/// Eastern boundary of the map extent (maximum X in meters)
-	/// </summary>
-	public double East { get; set; }
-
-	/// <summary>
-	/// Southern boundary of the map extent (minimum Y in meters)
-	/// </summary>
-	public double South { get; set; }
-
-	/// <summary>
-	/// Western boundary of the map extent (minimum X in meters)
-	/// </summary>
-	public double West { get; set; }
-
-	/// <summary>
-	/// Maximum extent of the Spherical Mercator projection in meters
+	///     Maximum extent of the Spherical Mercator projection in meters
 	/// </summary>
 	public const double MaxExtent = 6378137;
 
 	/// <summary>
-	/// Creates a new map extent with default values (full Spherical Mercator extent)
+	///     Creates a new map extent with default values (full Spherical Mercator extent)
 	/// </summary>
 	public MapExtent()
 	{
@@ -43,7 +25,7 @@ public class MapExtent
 	}
 
 	/// <summary>
-	/// Creates a new map extent with specified boundaries in meters
+	///     Creates a new map extent with specified boundaries in meters
 	/// </summary>
 	/// <param name="north">Northern boundary (max Y in meters)</param>
 	/// <param name="east">Eastern boundary (max X in meters)</param>
@@ -58,41 +40,71 @@ public class MapExtent
 	}
 
 	/// <summary>
-	/// Width of the extent in meters
+	///     Northern boundary of the map extent (maximum Y in meters)
+	/// </summary>
+	public double North { get; set; }
+
+	/// <summary>
+	///     Eastern boundary of the map extent (maximum X in meters)
+	/// </summary>
+	public double East { get; set; }
+
+	/// <summary>
+	///     Southern boundary of the map extent (minimum Y in meters)
+	/// </summary>
+	public double South { get; set; }
+
+	/// <summary>
+	///     Western boundary of the map extent (minimum X in meters)
+	/// </summary>
+	public double West { get; set; }
+
+	/// <summary>
+	///     Width of the extent in meters
 	/// </summary>
 	public double Width => East - West;
 
 	/// <summary>
-	/// Height of the extent in meters
+	///     Height of the extent in meters
 	/// </summary>
 	public double Height => North - South;
 
 	/// <summary>
-	/// Gets the center point of the map extent
+	///     Gets the center point of the map extent
 	/// </summary>
 	/// <returns>A CoordinatePair representing the center point in meters</returns>
-	public CoordinatePair GetCenter() => new((East + West) / 2.0, (North + South) / 2.0);
+	public CoordinatePair GetCenter()
+	{
+		return new CoordinatePair((East + West) / 2.0, (North + South) / 2.0);
+	}
 
 	/// <summary>
-	/// Checks if a coordinate pair is within this map extent
+	///     Checks if a coordinate pair is within this map extent
 	/// </summary>
 	/// <param name="point">The coordinate pair to check</param>
 	/// <returns>True if the point is within the extent, false otherwise</returns>
-	public bool Contains(CoordinatePair point) =>
-		point.X >= West && point.X <= East &&
-		point.Y >= South && point.Y <= North;
+	public bool Contains(CoordinatePair point)
+	{
+		return point.X >= West && point.X <= East &&
+		       point.Y >= South && point.Y <= North;
+	}
 
 	/// <summary>
-	/// Validates if the extent is within the valid range for Spherical Mercator
+	///     Validates if the extent is within the valid range for Spherical Mercator
 	/// </summary>
 	/// <returns>True if valid, false otherwise</returns>
-	public bool IsValid() =>
-		West >= -MaxExtent && East <= MaxExtent &&
-		South >= -MaxExtent && North <= MaxExtent &&
-		West < East && South < North;
+	public bool IsValid()
+	{
+		return West >= -MaxExtent && East <= MaxExtent &&
+		       South >= -MaxExtent && North <= MaxExtent &&
+		       West < East && South < North;
+	}
 
 	/// <summary>
-	/// Returns a string representation of the map extent in meters
+	///     Returns a string representation of the map extent in meters
 	/// </summary>
-	public override string ToString() => $"N:{North}m, E:{East}m, S:{South}m, W:{West}m";
+	public override string ToString()
+	{
+		return $"N:{North}m, E:{East}m, S:{South}m, W:{West}m";
+	}
 }

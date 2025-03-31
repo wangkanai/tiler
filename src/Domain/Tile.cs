@@ -1,3 +1,5 @@
+// Copyright (c) 2014-2025 Sarin Na Wangkanai, All Rights Reserved.Apache License, Version 2.0
+
 using System.Text;
 
 namespace Wangkanai.Tiler.Domain;
@@ -5,7 +7,7 @@ namespace Wangkanai.Tiler.Domain;
 public static class Tile
 {
 	/// <summary>
-	/// Converts tile XYZ coordinates into a QuadKey at a specified level of detail.
+	///     Converts tile XYZ coordinates into a QuadKey at a specified level of detail.
 	/// </summary>
 	/// <param name="x">Tile X coordinate</param>
 	/// <param name="y">Tile Y coordinate</param>
@@ -15,7 +17,7 @@ public static class Tile
 	{
 		var quadKey = new StringBuilder();
 
-		for (int i = zoom; i > 0; i--)
+		for (var i = zoom; i > 0; i--)
 		{
 			var digit = '0';
 			var mask  = 1 << (i - 1);
