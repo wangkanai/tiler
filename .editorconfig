@@ -63,6 +63,9 @@ resharper_align_multline_type_parameter_constrains                    =true
 resharper_align_multiline_array_and_object_initializer                =true
 resharper_enforce_line_ending_style                                   =true
 resharper_csharp_max_line_length                                      =300
+resharper_xmldoc_indent_text                                          =ZeroIndent
+resharper_xmldoc_keep_user_linebreaks                                 =false
+
 
 # ReSharper inspection severities
 resharper_arrange_redundant_parentheses_highlighting                  =hint
