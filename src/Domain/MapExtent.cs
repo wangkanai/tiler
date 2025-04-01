@@ -3,13 +3,13 @@
 namespace Wangkanai.Tiler.Domain;
 
 /// <summary>
-///     Represents the geographical extent of a map canvas in Spherical Mercator projection (EPSG:3857).
-///     Boundaries are expressed in meters.
+/// Represents the geographical extent of a map canvas in Spherical Mercator projection (EPSG:3857).
+/// Boundaries are expressed in meters.
 /// </summary>
 public class MapExtent
 {
 	/// <summary>
-	///     Maximum extent of the Spherical Mercator projection in meters
+	/// Maximum extent of the Spherical Mercator projection in meters
 	/// </summary>
 	public const double MaxExtent = 6378137;
 
@@ -39,9 +39,7 @@ public class MapExtent
 		West  = west;
 	}
 
-	/// <summary>
-	///     Northern boundary of the map extent (maximum Y in meters)
-	/// </summary>
+	/// <summary>Northern boundary of the map extent (maximum Y in meters)</summary>
 	public double North { get; set; }
 
 	/// <summary>
