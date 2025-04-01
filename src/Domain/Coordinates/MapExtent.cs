@@ -9,15 +9,15 @@ namespace Wangkanai.Tiler.Domain;
 public class MapExtent
 {
 	/// <summary>Maximum extent of the Spherical Mercator projection in meters</summary>
-	public const double MaxExtent = 6378137;
+	public const double Max = 6378137;
 
 	/// <summary>Creates a new map extent with default values (full Spherical Mercator extent)</summary>
 	public MapExtent()
 	{
-		North = Math.PI * MaxExtent;
-		East  = Math.PI * MaxExtent;
-		South = Math.PI * -MaxExtent;
-		West  = Math.PI * -MaxExtent;
+		North = Math.PI * Max;
+		East  = Math.PI * Max;
+		South = Math.PI * -Max;
+		West  = Math.PI * -Max;
 	}
 
 	/// <summary>Creates a new map extent with specified boundaries in meters</summary>
@@ -66,8 +66,8 @@ public class MapExtent
 	/// <summary>Validates if the extent is within the valid range for Spherical Mercator</summary>
 	/// <returns>True if valid, false otherwise</returns>
 	public bool IsValid()
-		=> West >= -MaxExtent && East <= MaxExtent &&
-		   South >= -MaxExtent && North <= MaxExtent &&
+		=> West >= -Max && East <= Max &&
+		   South >= -Max && North <= Max &&
 		   West < East && South < North;
 
 	/// <summary>Returns a string representation of the map extent in meters</summary>
