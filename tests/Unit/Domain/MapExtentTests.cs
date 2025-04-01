@@ -12,10 +12,10 @@ public class MapExtentTests
 
 		// Assert
 		// Default constructor sets the map extent to the full Spherical Mercator projection range
-		Assert.Equal(Math.PI * MapExtent.MaxExtent, mapExtent.North);
-		Assert.Equal(Math.PI * MapExtent.MaxExtent, mapExtent.East);
-		Assert.Equal(Math.PI * -MapExtent.MaxExtent, mapExtent.South);
-		Assert.Equal(Math.PI * -MapExtent.MaxExtent, mapExtent.West);
+		Assert.Equal(Math.PI * MapExtent.Max, mapExtent.North);
+		Assert.Equal(Math.PI * MapExtent.Max, mapExtent.East);
+		Assert.Equal(Math.PI * -MapExtent.Max, mapExtent.South);
+		Assert.Equal(Math.PI * -MapExtent.Max, mapExtent.West);
 	}
 
 	[Fact]
@@ -100,10 +100,10 @@ public class MapExtentTests
 
 	[Theory]
 	[InlineData(10000, 20000, -10000, -20000, true)]       // Valid extent
-	[InlineData(MapExtent.MaxExtent + 1, 0, 0, 0, false)]  // North too large
-	[InlineData(0, MapExtent.MaxExtent + 1, 0, 0, false)]  // East too large
-	[InlineData(0, 0, -MapExtent.MaxExtent - 1, 0, false)] // South too small
-	[InlineData(0, 0, 0, -MapExtent.MaxExtent - 1, false)] // West too small
+	[InlineData(MapExtent.Max + 1, 0, 0, 0, false)]  // North too large
+	[InlineData(0, MapExtent.Max + 1, 0, 0, false)]  // East too large
+	[InlineData(0, 0, -MapExtent.Max - 1, 0, false)] // South too small
+	[InlineData(0, 0, 0, -MapExtent.Max - 1, false)] // West too small
 	[InlineData(0, 0, 10, 0, false)]                       // South > North
 	[InlineData(0, 0, 0, 10, false)]                       // West > East
 	public void IsValid_ChecksExtentCorrectly(double north, double east, double south, double west, bool expected)
