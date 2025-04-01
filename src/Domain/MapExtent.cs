@@ -8,14 +8,10 @@ namespace Wangkanai.Tiler.Domain;
 /// </summary>
 public class MapExtent
 {
-	/// <summary>
-	/// Maximum extent of the Spherical Mercator projection in meters
-	/// </summary>
+	/// <summary>Maximum extent of the Spherical Mercator projection in meters</summary>
 	public const double MaxExtent = 6378137;
 
-	/// <summary>
-	///     Creates a new map extent with default values (full Spherical Mercator extent)
-	/// </summary>
+	/// <summary>Creates a new map extent with default values (full Spherical Mercator extent)</summary>
 	public MapExtent()
 	{
 		North = Math.PI * MaxExtent;
@@ -24,9 +20,7 @@ public class MapExtent
 		West  = Math.PI * -MaxExtent;
 	}
 
-	/// <summary>
-	///     Creates a new map extent with specified boundaries in meters
-	/// </summary>
+	/// <summary>Creates a new map extent with specified boundaries in meters</summary>
 	/// <param name="north">Northern boundary (max Y in meters)</param>
 	/// <param name="east">Eastern boundary (max X in meters)</param>
 	/// <param name="south">Southern boundary (min Y in meters)</param>
@@ -42,67 +36,41 @@ public class MapExtent
 	/// <summary>Northern boundary of the map extent (maximum Y in meters)</summary>
 	public double North { get; set; }
 
-	/// <summary>
-	///     Eastern boundary of the map extent (maximum X in meters)
-	/// </summary>
+	/// <summary>Eastern boundary of the map extent (maximum X in meters)</summary>
 	public double East { get; set; }
 
-	/// <summary>
-	///     Southern boundary of the map extent (minimum Y in meters)
-	/// </summary>
+	/// <summary>Southern boundary of the map extent (minimum Y in meters)</summary>
 	public double South { get; set; }
 
-	/// <summary>
-	///     Western boundary of the map extent (minimum X in meters)
-	/// </summary>
+	/// <summary>Western boundary of the map extent (minimum X in meters)</summary>
 	public double West { get; set; }
 
-	/// <summary>
-	///     Width of the extent in meters
-	/// </summary>
+	/// <summary>Width of the extent in meters</summary>
 	public double Width => East - West;
 
-	/// <summary>
-	///     Height of the extent in meters
-	/// </summary>
+	/// <summary>Height of the extent in meters</summary>
 	public double Height => North - South;
 
-	/// <summary>
-	///     Gets the center point of the map extent
-	/// </summary>
+	/// <summary>Gets the center point of the map extent</summary>
 	/// <returns>A CoordinatePair representing the center point in meters</returns>
 	public CoordinatePair GetCenter()
-	{
-		return new CoordinatePair((East + West) / 2.0, (North + South) / 2.0);
-	}
+		=> new((East + West) / 2.0, (North + South) / 2.0);
 
-	/// <summary>
-	///     Checks if a coordinate pair is within this map extent
-	/// </summary>
+	/// <summary>Checks if a coordinate pair is within this map extent</summary>
 	/// <param name="point">The coordinate pair to check</param>
 	/// <returns>True if the point is within the extent, false otherwise</returns>
 	public bool Contains(CoordinatePair point)
-	{
-		return point.X >= West && point.X <= East &&
-		       point.Y >= South && point.Y <= North;
-	}
+		=> point.X >= West && point.X <= East &&
+		   point.Y >= South && point.Y <= North;
 
-	/// <summary>
-	///     Validates if the extent is within the valid range for Spherical Mercator
-	/// </summary>
+	/// <summary>Validates if the extent is within the valid range for Spherical Mercator</summary>
 	/// <returns>True if valid, false otherwise</returns>
 	public bool IsValid()
-	{
-		return West >= -MaxExtent && East <= MaxExtent &&
-		       South >= -MaxExtent && North <= MaxExtent &&
-		       West < East && South < North;
-	}
+		=> West >= -MaxExtent && East <= MaxExtent &&
+		   South >= -MaxExtent && North <= MaxExtent &&
+		   West < East && South < North;
 
-	/// <summary>
-	///     Returns a string representation of the map extent in meters
-	/// </summary>
+	/// <summary>Returns a string representation of the map extent in meters</summary>
 	public override string ToString()
-	{
-		return $"N:{North}m, E:{East}m, S:{South}m, W:{West}m";
-	}
+		=> $"N:{North}m, E:{East}m, S:{South}m, W:{West}m";
 }
