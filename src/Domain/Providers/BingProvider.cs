@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2024 Sarin Na Wangkanai, All Rights Reserved.Apache License, Version 2.0
+// Copyright (c) 2014-2025 Sarin Na Wangkanai, All Rights Reserved.Apache License, Version 2.0
 
 namespace Wangkanai.Tiler.Domain.Providers;
 
@@ -9,6 +9,4 @@ public class BingProvider
 		var q = Tile.QuadKey(x, y, z);
 		return $"http://ecn.t3.tiles.virtualearth.net/tiles/a{q}.jpeg?g=1";
 	}
-
-
 }
