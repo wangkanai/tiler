@@ -2,7 +2,7 @@
 
 namespace Wangkanai.Tiler.Domain;
 
-public class TileTests
+public class TileExtensionsTests
 {
 	[Fact]
 	public void QuadKey_WhenCalledWithValidCoordinates_ReturnsCorrectQuadKey()
@@ -14,7 +14,7 @@ public class TileTests
 		var expectedQuadKey = "213";
 
 		// Act
-		var result = Tile.QuadKey(x, y, zoom);
+		var result = TileExtensions.QuadKey(x, y, zoom);
 
 		// Assert
 		Assert.Equal(expectedQuadKey, result);
@@ -30,7 +30,7 @@ public class TileTests
 		var expectedQuadKey = "000";
 
 		// Act
-		var result = Tile.QuadKey(x, y, zoom);
+		var result = TileExtensions.QuadKey(x, y, zoom);
 
 		// Assert
 		Assert.Equal(expectedQuadKey, result);
@@ -46,7 +46,7 @@ public class TileTests
 		var expectedQuadKey = "333";
 
 		// Act
-		var result = Tile.QuadKey(x, y, zoom);
+		var result = TileExtensions.QuadKey(x, y, zoom);
 
 		// Assert
 		Assert.Equal(expectedQuadKey, result);
@@ -61,7 +61,7 @@ public class TileTests
 		var zoom = 1;
 
 		// Act
-		var result = Tile.QuadKey(x, y, zoom);
+		var result = TileExtensions.QuadKey(x, y, zoom);
 
 		// Assert
 		Assert.Equal("0", result);
@@ -77,7 +77,7 @@ public class TileTests
 		var zoom = 2;
 
 		// Act
-		var result = Tile.QuadKey(x, y, zoom);
+		var result = TileExtensions.QuadKey(x, y, zoom);
 
 		// Assert
 		Assert.Equal("12", result);
@@ -95,7 +95,7 @@ public class TileTests
 	public void QuadKey_WithVariousInputs_ReturnsExpectedResults(int x, int y, int zoom, string expected)
 	{
 		// Act
-		var result = Tile.QuadKey(x, y, zoom);
+		var result = TileExtensions.QuadKey(x, y, zoom);
 
 		// Assert
 		Assert.Equal(expected, result);
@@ -117,7 +117,7 @@ public class TileTests
 		                  };
 
 		// Act
-		var results = coordinates.Select(c => Tile.QuadKey(c.x, c.y, zoom)).ToList();
+		var results = coordinates.Select(c => TileExtensions.QuadKey(c.x, c.y, zoom)).ToList();
 
 		// Assert
 		Assert.Equal(coordinates.Length, results.Distinct().Count());
@@ -129,16 +129,16 @@ public class TileTests
 		// This test verifies the bit pattern handling for each quadrant at zoom level 1
 
 		// Quadrant 0: x=0, y=0
-		Assert.Equal("0", Tile.QuadKey(0, 0, 1));
+		Assert.Equal("0", TileExtensions.QuadKey(0, 0, 1));
 
 		// Quadrant 1: x=1, y=0
-		Assert.Equal("1", Tile.QuadKey(1, 0, 1));
+		Assert.Equal("1", TileExtensions.QuadKey(1, 0, 1));
 
 		// Quadrant 2: x=0, y=1
-		Assert.Equal("2", Tile.QuadKey(0, 1, 1));
+		Assert.Equal("2", TileExtensions.QuadKey(0, 1, 1));
 
 		// Quadrant 3: x=1, y=1
-		Assert.Equal("3", Tile.QuadKey(1, 1, 1));
+		Assert.Equal("3", TileExtensions.QuadKey(1, 1, 1));
 	}
 
 	[Fact]
@@ -150,7 +150,7 @@ public class TileTests
 		var y    = 7654321;
 
 		// Act
-		var result = Tile.QuadKey(x, y, zoom);
+		var result = TileExtensions.QuadKey(x, y, zoom);
 
 		// Assert
 		Assert.Equal(zoom, result.Length);
@@ -165,7 +165,7 @@ public class TileTests
 			var x = zoom * 2;
 			var y = zoom * 3;
 
-			var result = Tile.QuadKey(x, y, zoom);
+			var result = TileExtensions.QuadKey(x, y, zoom);
 
 			Assert.Equal(zoom, result.Length);
 		}
@@ -178,9 +178,9 @@ public class TileTests
 		// encodes the most significant bit position
 
 		// For zoom=3, the first digit should encode bit position 2
-		Assert.Equal('0', Tile.QuadKey(0, 0, 3)[0]);
-		Assert.Equal('1', Tile.QuadKey(4, 0, 3)[0]);
-		Assert.Equal('2', Tile.QuadKey(0, 4, 3)[0]);
-		Assert.Equal('3', Tile.QuadKey(4, 4, 3)[0]);
+		Assert.Equal('0', TileExtensions.QuadKey(0, 0, 3)[0]);
+		Assert.Equal('1', TileExtensions.QuadKey(4, 0, 3)[0]);
+		Assert.Equal('2', TileExtensions.QuadKey(0, 4, 3)[0]);
+		Assert.Equal('3', TileExtensions.QuadKey(4, 4, 3)[0]);
 	}
 }
