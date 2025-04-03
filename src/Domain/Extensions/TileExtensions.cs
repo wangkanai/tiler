@@ -2,13 +2,11 @@
 
 using System.Text;
 
-namespace Wangkanai.Tiler.Domain;
+namespace Wangkanai.Tiler;
 
-public static class Tile
+public static class TileExtensions
 {
-	/// <summary>
-	///     Converts tile XYZ coordinates into a QuadKey at a specified level of detail.
-	/// </summary>
+	/// <summary>Converts tile XYZ coordinates into a QuadKey at a specified level of detail.</summary>
 	/// <param name="x">Tile X coordinate</param>
 	/// <param name="y">Tile Y coordinate</param>
 	/// <param name="zoom">zoom, from 1 (lowest detail) to 23 (highest detail)</param>
