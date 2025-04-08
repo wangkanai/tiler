@@ -1,1 +1,5 @@
-- @azure Rule - Use Azure Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `get_azure_best_practices` tool if available.
+# Copilot edit & agent operation guidelines
+
+## Prime directive
+
+Be pragmatic in explaining the operation that will be provide to resolve the requirement
