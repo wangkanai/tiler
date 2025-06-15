@@ -21,10 +21,10 @@ Get-ChildItem   -Recurse Wangkanai.*.dll | where { $_.Directory -like "*Release*
     signtool sign /fd SHA256 /t http://timestamp.digicert.com /n $name $_.FullName
 }
 
-dotnet pack -c Release -tl -o .\artifacts --include-symbols -p:SymbolPackageFormat=snupkg
+dotnet pack     -c Release -tl -o .\artifacts --include-symbols -p:SymbolPackageFormat=snupkg
 
-dotnet nuget sign .\artifacts\*.nupkg  -v normal --timestamper http://timestamp.digicert.com --certificate-subject-name $certicate -o .\signed
-dotnet nuget sign .\artifacts\*.snupkg -v normal --timestamper http://timestamp.digicert.com --certificate-subject-name $certicate -o .\signed
+dotnet nuget sign .\artifacts\*.nupkg  -v normal --timestamper http://timestamp.digicert.com --certificate-subject-name $name -o .\signed
+dotnet nuget sign .\artifacts\*.snupkg -v normal --timestamper http://timestamp.digicert.com --certificate-subject-name $name -o .\signed
 
 if (!$publish)
 {
