@@ -1,4 +1,4 @@
-# Wangkanai Map Tiler 🗺️✨
+# 🗺️ Wangkanai Map Tiler ✨
 
 [![NuGet Version](https://img.shields.io/nuget/v/wangkanai.tiler)](https://www.nuget.org/packages/wangkanai.tiler)
 [![NuGet Pre Release](https://img.shields.io/nuget/vpre/wangkanai.tiler)](https://www.nuget.org/packages/wangkanai.tiler)
@@ -12,17 +12,17 @@
 
 Welcome to **Wangkanai Map Tiler** – an open source project dedicated to transforming raster images and vector geodata into high-resolution tiled maps. 🌍 Whether you are a GIS enthusiast, a developer, a cartographer, or simply someone passionate about maps and open data, this project is for you! We invite you to join us on this journey to make map tiling accessible, efficient, and fun for everyone. 🚀
 
-## What is Wangkanai Map Tiler? 🤔
+## 🤔 What is Wangkanai Map Tiler?
 
 Wangkanai Map Tiler is a powerful, flexible, and easy-to-use tool designed to convert your raster images (such as satellite photos, scanned maps, or aerial imagery) and vector geodata (like shapefiles, GeoJSON, or other vector formats) into tiled map layers. These tiles can be used in web mapping applications, GIS platforms, or any project that requires fast, scalable, and interactive maps. 🗺️
 
 Our mission is to democratize map tiling technology, making it available to everyone, regardless of their technical background. We believe that maps are a universal language, and by empowering people to create and share their own maps, we can foster greater understanding, collaboration, and innovation across the globe. 🌐
 
-## Reference
+## ※ Reference
 
 - [Tiles à la Google Maps](https://docs.maptiler.com/google-maps-coordinates-tile-bounds-projection/)
 
-## Why Map Tiling? 🧩
+## 🧩 Why Map Tiling?
 
 Map tiling is the process of breaking down large map images or datasets into smaller, more manageable pieces called tiles. These tiles are then served to users as they navigate a map, allowing for smooth zooming, panning, and interaction. This approach is used by major mapping platforms like Google Maps, OpenStreetMap, and Mapbox, and is essential for delivering high-performance, scalable maps on the web and mobile devices. 📱💻
 
@@ -34,7 +34,7 @@ With Wangkanai Map Tiler, you can:
 - Integrate your tiles with popular mapping libraries (Leaflet, OpenLayers, MapLibre, etc.) 🧭
 - Host your own map tile server or export tiles for offline use 🏠
 
-## Features 🌟
+## 🌟 Features
 
 - Support for common raster and vector formats
 - Customizable tile size, zoom levels, and projections
@@ -44,7 +44,7 @@ With Wangkanai Map Tiler, you can:
 - Extensible architecture for plugins and custom workflows
 - Comprehensive test suite for reliability
 
-## Roadmap
+## 🛣️ Roadmap
 
 We are constantly working to improve and expand Wangkanai Map Tiler. Some of our planned features include:
 
@@ -56,7 +56,7 @@ We are constantly working to improve and expand Wangkanai Map Tiler. Some of our
 
 Your feedback and contributions will help shape the future of this project!
 
-## Vision
+## 🔭 Vision
 
 We envision Wangkanai Map Tiler as a community-driven project that grows and evolves with the needs of its users. Our goals include:
 
@@ -66,7 +66,7 @@ We envision Wangkanai Map Tiler as a community-driven project that grows and evo
 - **Extensibility:** Enable easy integration with other tools and platforms
 - **Open Collaboration:** Foster a welcoming and inclusive community of contributors
 
-## Who Should Use Wangkanai Map Tiler?
+## 👯‍♂️ Who Should Use Wangkanai Map Tiler?
 
 - **Developers:** Integrate map tiling into your applications, automate workflows, or contribute new features
 - **Cartographers:** Create custom map layers for visualization, analysis, or storytelling
@@ -76,7 +76,7 @@ We envision Wangkanai Map Tiler as a community-driven project that grows and evo
 
 No matter your background or experience level, you are welcome here!
 
-## How Does It Work?
+## ⚙️ How Does It Work?
 
 Wangkanai Map Tiler is built with modern .NET technologies, ensuring cross-platform compatibility, high performance, and ease of use. The project is organized into several components:
 
@@ -87,7 +87,7 @@ Wangkanai Map Tiler is built with modern .NET technologies, ensuring cross-platf
 
 You can use the command-line tool to process your data, or integrate the core libraries into your own applications. Detailed documentation and examples are provided to help you get started quickly.
 
-## Getting Started
+## 🏁 Getting Started
 
 1. **Clone the Repository:**
    ```bash
@@ -102,7 +102,7 @@ You can use the command-line tool to process your data, or integrate the core li
 4. **Explore the Examples:**
    Check out the sample data and usage examples in the documentation.
 
-## How to Contribute
+## 🖲️ How to Contribute
 
 We believe that open source is all about collaboration, learning, and mutual support. Whether you are a seasoned developer or just getting started, there are many ways to get involved:
 
@@ -114,7 +114,7 @@ We believe that open source is all about collaboration, learning, and mutual sup
 
 We are committed to maintaining a welcoming and inclusive environment for everyone. Please read our [Code of Conduct](https://github.com/wangkanai/tiler/blob/main/CODE_OF_CONDUCT.md) before contributing.
 
-## Community & Support
+## 🎗️Community & Support
 
 - **GitHub Issues:** For bug reports, feature requests, and questions
 - **Discussions:** Join the conversation on our GitHub Discussions page
@@ -123,7 +123,7 @@ We are committed to maintaining a welcoming and inclusive environment for everyo
 
 If you need help or want to share your ideas, don’t hesitate to reach out. We love hearing from our users and contributors!
 
-## Why Contribute?
+## 🦢 Why Contribute?
 
 By contributing to Wangkanai Map Tiler, you will:
 
@@ -133,7 +133,7 @@ By contributing to Wangkanai Map Tiler, you will:
 - Help make mapping technology more accessible to everyone
 - Have fun and make a positive impact!
 
-## License
+## 🪪 License
 
 Wangkanai Map Tiler is released under the [MIT License](https://github.com/wangkanai/tiler/blob/main/LICENSE). You are free to use, modify, and distribute the software, subject to the terms of the license.
 
