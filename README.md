@@ -1,4 +1,4 @@
-# Wangkanai Map Tiler
+# Wangkanai Map Tiler 🗺️✨
 
 [![NuGet Version](https://img.shields.io/nuget/v/wangkanai.tiler)](https://www.nuget.org/packages/wangkanai.tiler)
 [![NuGet Pre Release](https://img.shields.io/nuget/vpre/wangkanai.tiler)](https://www.nuget.org/packages/wangkanai.tiler)
@@ -10,31 +10,35 @@
 [![Patreon](https://img.shields.io/badge/patreon-support%20me-d9643a.svg)](https://www.patreon.com/wangkanai)
 [![GitHub](https://img.shields.io/github/license/wangkanai/tiler)](https://github.com/wangkanai/tiler/blob/main/LICENSE)
 
-Welcome to **Wangkanai Map Tiler** – an open source project dedicated to transforming raster images and vector geodata into high-resolution tiled maps. Whether you are a GIS enthusiast, a developer, a cartographer, or simply someone passionate about maps and open data, this project is for you! We invite you to join us on this journey to make map tiling accessible, efficient, and fun for everyone.
+Welcome to **Wangkanai Map Tiler** – an open source project dedicated to transforming raster images and vector geodata into high-resolution tiled maps. 🌍 Whether you are a GIS enthusiast, a developer, a cartographer, or simply someone passionate about maps and open data, this project is for you! We invite you to join us on this journey to make map tiling accessible, efficient, and fun for everyone. 🚀
 
-## What is Wangkanai Map Tiler?
+## What is Wangkanai Map Tiler? 🤔
 
-Wangkanai Map Tiler is a powerful, flexible, and easy-to-use tool designed to convert your raster images (such as satellite photos, scanned maps, or aerial imagery) and vector geodata (like shapefiles, GeoJSON, or other vector formats) into tiled map layers. These tiles can be used in web mapping applications, GIS platforms, or any project that requires fast, scalable, and interactive maps.
+Wangkanai Map Tiler is a powerful, flexible, and easy-to-use tool designed to convert your raster images (such as satellite photos, scanned maps, or aerial imagery) and vector geodata (like shapefiles, GeoJSON, or other vector formats) into tiled map layers. These tiles can be used in web mapping applications, GIS platforms, or any project that requires fast, scalable, and interactive maps. 🗺️
 
-Our mission is to democratize map tiling technology, making it available to everyone, regardless of their technical background. We believe that maps are a universal language, and by empowering people to create and share their own maps, we can foster greater understanding, collaboration, and innovation across the globe.
+Our mission is to democratize map tiling technology, making it available to everyone, regardless of their technical background. We believe that maps are a universal language, and by empowering people to create and share their own maps, we can foster greater understanding, collaboration, and innovation across the globe. 🌐
 
-## Why Map Tiling?
+## Reference
 
-Map tiling is the process of breaking down large map images or datasets into smaller, more manageable pieces called tiles. These tiles are then served to users as they navigate a map, allowing for smooth zooming, panning, and interaction. This approach is used by major mapping platforms like Google Maps, OpenStreetMap, and Mapbox, and is essential for delivering high-performance, scalable maps on the web and mobile devices.
+- [Tiles à la Google Maps](https://docs.maptiler.com/google-maps-coordinates-tile-bounds-projection/)
+
+## Why Map Tiling? 🧩
+
+Map tiling is the process of breaking down large map images or datasets into smaller, more manageable pieces called tiles. These tiles are then served to users as they navigate a map, allowing for smooth zooming, panning, and interaction. This approach is used by major mapping platforms like Google Maps, OpenStreetMap, and Mapbox, and is essential for delivering high-performance, scalable maps on the web and mobile devices. 📱💻
 
 With Wangkanai Map Tiler, you can:
 
-- Convert massive raster images into web-friendly map tiles
-- Transform vector geodata into interactive map layers
-- Customize tile generation parameters (zoom levels, projections, formats, etc.)
-- Integrate your tiles with popular mapping libraries (Leaflet, OpenLayers, MapLibre, etc.)
-- Host your own map tile server or export tiles for offline use
+- Convert massive raster images into web-friendly map tiles 🖼️
+- Transform vector geodata into interactive map layers 🗂️
+- Customize tile generation parameters (zoom levels, projections, formats, etc.) ⚙️
+- Integrate your tiles with popular mapping libraries (Leaflet, OpenLayers, MapLibre, etc.) 🧭
+- Host your own map tile server or export tiles for offline use 🏠
 
-## Features
+## Features 🌟
 
 - Support for common raster and vector formats
 - Customizable tile size, zoom levels, and projections
-- Fast, multi-threaded tile generation
+- Fast, multi-threaded tile generation ⚡
 - Integration with popular web mapping libraries
 - Export tiles for offline use or self-hosting
 - Extensible architecture for plugins and custom workflows
@@ -52,7 +56,7 @@ We are constantly working to improve and expand Wangkanai Map Tiler. Some of our
 
 Your feedback and contributions will help shape the future of this project!
 
-## Project Vision
+## Vision
 
 We envision Wangkanai Map Tiler as a community-driven project that grows and evolves with the needs of its users. Our goals include:
 
@@ -132,11 +136,6 @@ By contributing to Wangkanai Map Tiler, you will:
 ## License
 
 Wangkanai Map Tiler is released under the [MIT License](https://github.com/wangkanai/tiler/blob/main/LICENSE). You are free to use, modify, and distribute the software, subject to the terms of the license.
-
-
-## Reference
-
-- [Tiles à la Google Maps](https://docs.maptiler.com/google-maps-coordinates-tile-bounds-projection/)
 
 ---
 
