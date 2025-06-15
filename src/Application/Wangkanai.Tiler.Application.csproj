@@ -1,7 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<IsPackable>false</IsPackable>
-	</PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Domain\Wangkanai.Tiler.Domain.csproj" PrivateAssets="all" />
 	</ItemGroup>
