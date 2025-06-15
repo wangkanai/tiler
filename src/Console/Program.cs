@@ -3,12 +3,14 @@
 using System.CommandLine;
 using System.Text;
 
-internal static class Program
+namespace Wangkanai.Tiler;
+
+public static class Program
 {
 	private static async Task<int> Main(string[] args)
 	{
-		if (Console.IsInputRedirected)
-			Console.OutputEncoding = Encoding.UTF8;
+		if (System.Console.IsInputRedirected)
+			System.Console.OutputEncoding = Encoding.UTF8;
 
 		var rootCommand = new RootCommand("Wangkanai Map Tiler");
 
