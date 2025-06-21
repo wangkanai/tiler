@@ -2,7 +2,7 @@
 
 namespace Wangkanai.Tiler.Console.Commands;
 
-internal class GetCommand
+public class GetCommand
 {
-	
+
 }
